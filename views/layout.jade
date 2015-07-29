@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+	head
+		title=title
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(rel='stylesheet' href='/stylesheets/bootstrap.css')
+
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		nav(class="navbar navbar-default navbar-fixed-top")
+			div(class="container")
+				//Brand and toggle get grouped for better mobile display
+				div(class="navbar-header")
+					button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1", aria-expanded="false")
+						span(class="sr-only") Toggle navigation
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(class="navbar-brand", href="/") Login System
+				//Collect the nav links, forms, and other content for toggling
+				div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
+					ul(class="nav navbar-nav")
+						li(class=(title == 'Members' ? 'active' : ''))
+							a(href="/" ) Members	
+						li(class=(title == 'Register' ? 'active' : ''))
+							a(href="/users/register") Register 
+						li(class=(title == 'Login' ? 'active' : ''))
+							a(href="/users/login") Login
+					ul(class="nav navbar-nav navbar-right")
+						li
+							a(href="logout") Logout
+	div(class="container")
+		block content
+
+	footer
+		div(class="container")
+			div(class="row")
+				div(class="col-md-4")
+					p &copy; ExpressJS Website.
+				div(class="col-md-4")
+					p We appreciate your business.
+				div(class="col-md-4")
+					p Thank you for being part of the team.
+
+	script(type='text/javascript', src='/javascripts/jquery.js')
+	script(type='text/javascript', src='/javascripts/bootstrap.js')
