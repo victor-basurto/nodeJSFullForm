@@ -1,5 +1,10 @@
 var express = require('express');
+var passport = require('passport');   // add the dependencies that were missing
+var localStrategy = require('passport-local').Strategy;  // add the dependencies that were missing
+
 var router = express.Router();
+
+var User = require('../models/users');
 
 /**
  * In this section we will going to have all the users views
@@ -11,26 +16,26 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ 	res.send('respond with a resource');
 });
 
 // when the user go to register e.g. users/register
 router.get('/register', function( req, res, next ) {
-  res.render('register', {
-  	'title': 'Register'
-  });
+	res.render('register', {
+		'title': 'Register'
+	});
 });
 
 // when the user go to login e.g. users/login
 router.get('/login', function( req, res, next ) {
-  res.render('login', {
-  	'title': 'Login'
-  });
+	res.render('login', {
+		'title': 'Login'
+	});
 });
 
 /* POST users listing */
 // specify where to put content
-router.post('/register', function( req, res, next ) {
+router.post('/user/register', function( req, res, next ) {
 	// get form values
 	var name = req.body.name;
 	var email = req.body.email;
@@ -39,20 +44,21 @@ router.post('/register', function( req, res, next ) {
 	var password2 = req.body.password2;
 
 	// check for image field
-	if( req.files.profileimage ) {
+	if( req.body.avatar ) {
 		console.log('Uploading Files');
+		console.log('File: ' + req.file.avatar);
+		console.log('Body : ' + req.body.avatar);
 
 		// file info
-		var profileImageOriginalName = req.files.profileimage.originalname;
-		var profileImageName         = req.files.profileimage.name;
-		var profileImageMime         = req.files.profileimage.mimetype;
-		var profileImagePath         = req.files.profileimage.path;
-		var profileImageExt          = req.files.profileimage.extension;
-		var profileImageSize         = req.files.profileimage.size;
+		var avatarImageOriginalName = req.body.avatarimage.originalname;
+		var avatarImageName         = req.body.avatarimage.fieldname;
+		var avatarImageMime         = req.body.avatarimage.mimetype;
+		var avatarImagePath         = req.body.avatarimage.path;
+		var avatarImageSize         = req.body.avatarimage.size;
 	} else {
 		// in case they dont upload a file
 		// set a default image
-		var profileImageName = 'noimage.png';
+		var avatarImageName = 'noimage.png';
 	}
 
 	// form validation
@@ -87,24 +93,85 @@ router.post('/register', function( req, res, next ) {
 			email: email,
 			username: username,
 			password: password,
-			profileimage: profileImageName
+			profileimage: avatarImageName
 		});
 
 		// create new user and pass the newUser object we just created
-		// User.createUser(newUser, function( err, user ) {
-		// 	if(err) throw err;
-		// 	console.log(user);
-		// });
+		User.createUser(newUser, function( err, user ) {
+			if(err) throw err;
+			console.log(user);
+		});
 
 		// success message
 		req.flash('success', 'You are now registered and may log in');
 
 		res.location('/');
 		res.redirect('/');
-		res.render('/register');
+		// res.render('/register');
 	}
 
 });
 
+/**
+ * Keep Session Open
+ */
+passport.serializeUser(function( user, done ) {
+	done(null, user.id);
+});
+
+passport.deserializeUser(function( id, done ) {
+	User.getUserById(id, function( err, user ) {
+		done(err, user);
+	});
+});
+
+/**
+ * Check if user exist
+ */
+passport.use(new localStrategy(
+	function( username, password, done ) {
+		User.getUserByUsername(username, function( err, user ) {
+			if( err ) {
+				throw err;
+			}
+			if( !user ) {
+				console.log('Unknown User');
+				return done(null, false, {message: 'Unknown User'});
+			}
+			User.comparePassword(password, user.password, function( err, isMatch ) {
+				if( err ) {
+					console.log(err);
+				}
+				if( isMatch ) {
+					return done(null, user);
+				} else {
+					console.log('Invalid password');
+					return done(null, false, {
+						message: 'Invalid password'
+					});
+				}
+			});
+		});
+	}
+));
+
+// post to login route
+router.post('/users/login', passport
+	.authenticate('local', {
+		failureRedirect: 'login',
+		failureFlash: 'Invalid Username or Password'
+	}), function( req, res ) {
+		console.log('Authentication Successful');
+		req.flash('success', 'You are login');
+		res.redirect('/');
+	}
+);
+
+// checkout logout
+router.get('/logout', function( req, res ) {
+	req.logout();
+	req.flash('success', 'You Are Logged Out');
+	res.redirect('/users/login');
+});
 
 module.exports = router;

@@ -1,0 +1,96 @@
+"{ "_embedded" : { 
+	"rh:doc" : [ { 
+		"_embedded" : { } , 
+		"_links" : { 
+			"self" : { 
+				"href" : "/capstone-project/users/55b3bedcd81740b6635aa6e6"
+				} , 
+			"rh:coll" : {
+				 "href" : "/capstone-project"
+				} , 
+			"curies" : [ { 
+				"href" : "http://www.restheart.org/docs/v0.10/#api-doc-{rel}" ,
+				"name" : "rh"
+				}]
+			} , 
+		"_type" : "DOCUMENT" , 
+		"_id" : {
+		 	"$oid" : "55b3bedcd81740b6635aa6e6"
+			} , 
+			"first_name" : "Melinda" , 
+			"middle_name" : "" , 
+			"last_name" : "Alcantara" , 
+			"street_address" : "3862 Via de la Bandola" , 
+			"city" : "San Ysidro" , 
+			"email" : "mememelynda@gmail.com" , 
+			"state" : "CA" , 
+			"phone" : "6198666737" , 
+			"zip" : "92173" , 
+			"password" : "123456" , 
+			"comments" : "This is a testing" , 
+			"_etag" : { 
+				"$oid" : "55b3bedcd81740b6635aa6e7"
+				} , 
+			"_lastupdated_on" : "2015-07-25T16:52:44Z" , 
+			"_created_on" : "2015-07-25T16:52:44Z"}]} , 
+			"_links" : { 
+				"self" : { 
+					"href" : "/capstone-project/users?filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"} , 
+					"first" : { 
+						"href" : "/capstone-project/users?pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"
+						}"
+					} , 
+				"next" : { 
+					"href" : "/capstone-project/users?page=2&pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"
+					}"
+				} , 
+			"rh:db" : { 
+				"href" : "/capstone-project"} , 
+				"rh:filter" : { 
+					"href" : "/capstone-project/users/{?filter}" , 
+						"templated" : true
+					} , 
+				"rh:sort" : { 
+					"href" : "/capstone-project/users/{?sort_by}" , "templated" : true
+					} , 
+				"rh:paging" : { 
+					"href" : "/capstone-project/users/{?page}{&pagesize}" , 
+					"templated" : true
+					} , 
+				"rh:countandpaging" : { 
+					"href" : "/capstone-project/users/{?page}{&pagesize}&count" , 
+					"templated" : true
+					} , 
+				"rh:indexes" : { 
+					"href" : "/capstone-project/users/_indexes"
+					} , 
+				"curies" : [ { 
+					"href" : "http://www.restheart.org/docs/v0.10/#api-coll-{rel}" , 
+					"templated" : true , "name" : "rh"
+					}]
+				} , 
+		"_type" : "COLLECTION" , 
+		"_id" : "users" , 
+		"_created_on" : "2015-07-18T07:46:36Z" , 
+		"_etag" : { 
+			"$oid" : "55aa045c232dda7a21e69e67"
+		} , 
+		"_lastupdated_on" : "2015-07-18T07:46:36Z" , 
+		"_collection-props-cached" : false , 
+		"_returned" : 1
+	}"
+
+
+
+
+"{"readyState":4,"responseText":"{ \"_embedded\" : { \"rh:doc\" : [ { \"_embedded\" : { } , \"_links\" : { \"self\" : { \"href\" : \"/capstone-project/users/55b3bedcd81740b6635aa6e6\"} , \"rh:coll\" : { \"href\" : \"/capstone-project\"} , \"curies\" : [ { \"href\" : \"http://www.restheart.org/docs/v0.10/#api-doc-{rel}\" , \"name\" : \"rh\"}]} , \"_type\" : \"DOCUMENT\" , \"_id\" : { \"$oid\" : \"55b3bedcd81740b6635aa6e6\"} , \"first_name\" : \"Melinda\" , \"middle_name\" : \"\" , \"last_name\" : \"Alcantara\" , \"street_address\" : \"3862 Via de la Bandola\" , \"city\" : \"San Ysidro\" , \"email\" : \"mememelynda@gmail.com\" , \"state\" : \"CA\" , \"phone\" : \"6198666737\" , \"zip\" : \"92173\" , \"password\" : \"123456\" , \"comments\" : \"This is a testing\" , \"_etag\" : { \"$oid\" : \"55b3bedcd81740b6635aa6e7\"} , \"_lastupdated_on\" : \"2015-07-25T16:52:44Z\" , \"_created_on\" : \"2015-07-25T16:52:44Z\"}]} , \"_links\" : { \"self\" : { \"href\" : \"/capstone-project/users?filter={\\\"email\\\":\\\"mememelynda@gmail.com\\\",\\\"password\\\":\\\"123456\\\"}\"} , \"first\" : { \"href\" : \"/capstone-project/users?pagesize=100&filter={\\\"email\\\":\\\"mememelynda@gmail.com\\\",\\\"password\\\":\\\"123456\\\"}\"} , \"next\" : { \"href\" : \"/capstone-project/users?page=2&pagesize=100&filter={\\\"email\\\":\\\"mememelynda@gmail.com\\\",\\\"password\\\":\\\"123456\\\"}\"} , \"rh:db\" : { \"href\" : \"/capstone-project\"} , \"rh:filter\" : { \"href\" : \"/capstone-project/users/{?filter}\" , \"templated\" : true} , \"rh:sort\" : { \"href\" : \"/capstone-project/users/{?sort_by}\" , \"templated\" : true} , \"rh:paging\" : { \"href\" : \"/capstone-project/users/{?page}{&pagesize}\" , \"templated\" : true} , \"rh:countandpaging\" : { \"href\" : \"/capstone-project/users/{?page}{&pagesize}&count\" , \"templated\" : true} , \"rh:indexes\" : { \"href\" : \"/capstone-project/users/_indexes\"} , \"curies\" : [ { \"href\" : \"http://www.restheart.org/docs/v0.10/#api-coll-{rel}\" , \"templated\" : true , \"name\" : \"rh\"}]} , \"_type\" : \"COLLECTION\" , \"_id\" : \"users\" , \"_created_on\" : \"2015-07-18T07:46:36Z\" , \"_etag\" : { \"$oid\" : \"55aa045c232dda7a21e69e67\"} , \"_lastupdated_on\" : \"2015-07-18T07:46:36Z\" , \"_collection-props-cached\" : false , \"_returned\" : 1}","responseJSON":{"_embedded":{"rh:doc":[{"_embedded":{},"_links":{"self":{"href":"/capstone-project/users/55b3bedcd81740b6635aa6e6"},"rh:coll":{"href":"/capstone-project"},"curies":[{"href":"http://www.restheart.org/docs/v0.10/#api-doc-{rel}","name":"rh"}]},"_type":"DOCUMENT","_id":{"$oid":"55b3bedcd81740b6635aa6e6"},"first_name":"Melinda","middle_name":"","last_name":"Alcantara","street_address":"3862 Via de la Bandola","city":"San Ysidro","email":"mememelynda@gmail.com","state":"CA","phone":"6198666737","zip":"92173","password":"123456","comments":"This is a testing","_etag":{"$oid":"55b3bedcd81740b6635aa6e7"},"_lastupdated_on":"2015-07-25T16:52:44Z","_created_on":"2015-07-25T16:52:44Z"}]},"_links":{"self":{"href":"/capstone-project/users?filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"},"first":{"href":"/capstone-project/users?pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"},"next":{"href":"/capstone-project/users?page=2&pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"},"rh:db":{"href":"/capstone-project"},"rh:filter":{"href":"/capstone-project/users/{?filter}","templated":true},"rh:sort":{"href":"/capstone-project/users/{?sort_by}","templated":true},"rh:paging":{"href":"/capstone-project/users/{?page}{&pagesize}","templated":true},"rh:countandpaging":{"href":"/capstone-project/users/{?page}{&pagesize}&count","templated":true},"rh:indexes":{"href":"/capstone-project/users/_indexes"},"curies":[{"href":"http://www.restheart.org/docs/v0.10/#api-coll-{rel}","templated":true,"name":"rh"}]},"_type":"COLLECTION","_id":"users","_created_on":"2015-07-18T07:46:36Z","_etag":{"$oid":"55aa045c232dda7a21e69e67"},"_lastupdated_on":"2015-07-18T07:46:36Z","_collection-props-cached":false,"_returned":1},"status":200,"statusText":"OK"}"
+
+
+
+"{"readyState":4,"responseText":"{ \"_embedded\" : { } , \"_links\" : { \"self\" : { \"href\" : \"/capstone-project/users?filter={\\\"email\\\":\\\"fslkjd@lfjal.com\\\",\\\"password\\\":\\\"98493516\\\"}\"} , \"first\" : { \"href\" : \"/capstone-project/users?pagesize=100&filter={\\\"email\\\":\\\"fslkjd@lfjal.com\\\",\\\"password\\\":\\\"98493516\\\"}\"} , \"next\" : { \"href\" : \"/capstone-project/users?page=2&pagesize=100&filter={\\\"email\\\":\\\"fslkjd@lfjal.com\\\",\\\"password\\\":\\\"98493516\\\"}\"} , \"rh:db\" : { \"href\" : \"/capstone-project\"} , \"rh:filter\" : { \"href\" : \"/capstone-project/users/{?filter}\" , \"templated\" : true} , \"rh:sort\" : { \"href\" : \"/capstone-project/users/{?sort_by}\" , \"templated\" : true} , \"rh:paging\" : { \"href\" : \"/capstone-project/users/{?page}{&pagesize}\" , \"templated\" : true} , \"rh:countandpaging\" : { \"href\" : \"/capstone-project/users/{?page}{&pagesize}&count\" , \"templated\" : true} , \"rh:indexes\" : { \"href\" : \"/capstone-project/users/_indexes\"} , \"curies\" : [ { \"href\" : \"http://www.restheart.org/docs/v0.10/#api-coll-{rel}\" , \"templated\" : true , \"name\" : \"rh\"}]} , \"_type\" : \"COLLECTION\" , \"_id\" : \"users\" , \"_created_on\" : \"2015-07-18T07:46:36Z\" , \"_etag\" : { \"$oid\" : \"55aa045c232dda7a21e69e67\"} , \"_lastupdated_on\" : \"2015-07-18T07:46:36Z\" , \"_collection-props-cached\" : false , \"_returned\" : 0}","responseJSON":{"_embedded":{},"_links":{"self":{"href":"/capstone-project/users?filter={\"email\":\"fslkjd@lfjal.com\",\"password\":\"98493516\"}"},"first":{"href":"/capstone-project/users?pagesize=100&filter={\"email\":\"fslkjd@lfjal.com\",\"password\":\"98493516\"}"},"next":{"href":"/capstone-project/users?page=2&pagesize=100&filter={\"email\":\"fslkjd@lfjal.com\",\"password\":\"98493516\"}"},"rh:db":{"href":"/capstone-project"},"rh:filter":{"href":"/capstone-project/users/{?filter}","templated":true},"rh:sort":{"href":"/capstone-project/users/{?sort_by}","templated":true},"rh:paging":{"href":"/capstone-project/users/{?page}{&pagesize}","templated":true},"rh:countandpaging":{"href":"/capstone-project/users/{?page}{&pagesize}&count","templated":true},"rh:indexes":{"href":"/capstone-project/users/_indexes"},"curies":[{"href":"http://www.restheart.org/docs/v0.10/#api-coll-{rel}","templated":true,"name":"rh"}]},"_type":"COLLECTION","_id":"users","_created_on":"2015-07-18T07:46:36Z","_etag":{"$oid":"55aa045c232dda7a21e69e67"},"_lastupdated_on":"2015-07-18T07:46:36Z","_collection-props-cached":false,"_returned":0},"status":200,"statusText":"OK"}"
+
+
+
+ { "_embedded" : { "rh:doc" : [ { "_embedded" : { } , "_links" : { "self" : { "href" : "/capstone-project/users/55b3bedcd81740b6635aa6e6"} , "rh:coll" : { "href" : "/capstone-project"} , "curies" : [ { "href" : "http://www.restheart.org/docs/v0.10/#api-doc-{rel}" , "name" : "rh"}]} , "_type" : "DOCUMENT" , "_id" : { "$oid" : "55b3bedcd81740b6635aa6e6"} , "first_name" : "Melinda" , "middle_name" : "" , "last_name" : "Alcantara" , "street_address" : "3862 Via de la Bandola" , "city" : "San Ysidro" , "email" : "mememelynda@gmail.com" , "state" : "CA" , "phone" : "6198666737" , "zip" : "92173" , "password" : "123456" , "comments" : "This is a testing" , "_etag" : { "$oid" : "55b3bedcd81740b6635aa6e7"} , "_lastupdated_on" : "2015-07-25T16:52:44Z" , "_created_on" : "2015-07-25T16:52:44Z"}]} , "_links" : { "self" : { "href" : "/capstone-project/users?filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"} , "first" : { "href" : "/capstone-project/users?pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"} , "next" : { "href" : "/capstone-project/users?page=2&pagesize=100&filter={\"email\":\"mememelynda@gmail.com\",\"password\":\"123456\"}"} , "rh:db" : { "href" : "/capstone-project"} , "rh:filter" : { "href" : "/capstone-project/users/{?filter}" , "templated" : true} , "rh:sort" : { "href" : "/capstone-project/users/{?sort_by}" , "templated" : true} , "rh:paging" : { "href" : "/capstone-project/users/{?page}{&pagesize}" , "templated" : true} , "rh:countandpaging" : { "href" : "/capstone-project/users/{?page}{&pagesize}&count" , "templated" : true} , "rh:indexes" : { "href" : "/capstone-project/users/_indexes"} , "curies" : [ { "href" : "http://www.restheart.org/docs/v0.10/#api-coll-{rel}" , "templated" : true , "name" : "rh"}]} , "_type" : "COLLECTION" , "_id" : "users" , "_created_on" : "2015-07-18T07:46:36Z" , "_etag" : { "$oid" : "55aa045c232dda7a21e69e67"} , "_lastupdated_on" : "2015-07-18T07:46:36Z" , "_collection-props-cached" : false , "_returned" : 1}
+
+

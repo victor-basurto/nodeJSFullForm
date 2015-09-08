@@ -3,7 +3,7 @@ extends layout
 block content
 	h1 Login
 	p Please Login below
-	form(method="post", action="/user/register" entype="multipart/form-data" )
+	form(method="post", action="/users/login", entype="multipart/form-data" )
 		div(class="form-group")
 			label Username:
 			input(class="form-control", name="username", type="text", placeholder="Enter Username")

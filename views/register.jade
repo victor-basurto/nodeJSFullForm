@@ -7,7 +7,7 @@ block content
 		if errors
 			each error, i in errors
 				li(class="alert alert-danger") #{error.msg}
-	form(method="post", action="/user/register" entype="multipart/form-data" )
+	form(method="post", action="/user/register", enctype="multipart/form-data" )
 		div(class="form-group")
 			label Name:
 			input(class="form-control", name="name", type="text", placeholder="Enter Name")
@@ -25,5 +25,5 @@ block content
 			input(class="form-control", name="password2", type="password", placeholder="Confirm Password")
 		div(class="form-group")
 			label Profile Image:
-			input(class="form-control", name="profileimage", type="file")
+			input(class="form-control", name="avatar", type="file")
 		input(type="submit" class="btn btn-info", name="submit", value="Register")

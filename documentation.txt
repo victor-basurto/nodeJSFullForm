@@ -1,0 +1,19 @@
+login system
+
+* mongo
+* mongod
+
+1- *cmd -> go to project path 
+2- $ express // to install all dependencies
+3- modify package.json with the next config
+	version : "1.0.0",
+	mongodb : "*",   // asterisc means latest version
+	mongoose : "*",  // a driver that allow us to interact with mongo
+	connect-flash : "*",   // allow us to send flash messages
+	express-validator : "*", // allow us to validate forms
+	express-session : "*", // because we are using session to login
+	express-messages : "*", // create messages in the jade template
+	passport : "*",		// user authentication helper
+	passport-local : "*",   // to write our own functions
+	passport-http : "*",   // to send http request
+	multer : "*"	  // to minimize file uploads
